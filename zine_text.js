@@ -20,9 +20,9 @@ Ability Checks . . . . . . . . . . . . . . . . . . . . . . . . 2
 Roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
 &nbsp&nbspThe Judge . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
 &nbsp&nbspFinders of Fact/Law . . . . . . . . . . . . . . . . . . 4
-&nbsp&nbspAttorneys . . . . . . . . . . . . . . . . . . . . . . . . . . 5
-Case Sheets . . . . . . . . . . . . . . . . . . . . . . . . . 5
-Sample Gameplay . . . . . . . . . . . . . . . . . . . . . . 9
+&nbsp&nbspAttorneys . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Case Sheets . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Sample Gameplay . . . . . . . . . . . . . . . . . . . . . . 8
 Interactive Helper . . . . . . . . . . . . . . . . . . . . . 14
 </p>
 <h2><a href="#wisdom" name="wisdom" class="anchor"></a>Introduction</h2>
@@ -49,7 +49,7 @@ Interactive Helper . . . . . . . . . . . . . . . . . . . . . 14
 </table>
 
 <h2>Roles</h2>
-If we're going to be taking on roles, lets figure out what they are, but first, a word of caution. If you're not familiar with RPGs, things likely won't "click" until we get to the Sample Gameplay on page X. So, you only have to hold on a little longer.
+If we're going to be taking on roles, lets figure out what they are, but first, a word of caution. If you're not familiar with RPGs, things likely won't "click" until you finis the Sample Gameplay. So, you only have to hold on a little longer.
 
 <h2>The Judge</h2>
 You may be wondering who gets to decide if a task is "hard," well the Judge of course. In other RPGs this role is often called the Game Master (GM). They are the nearly omniscient narrator of our world, and given our setting they also play the actual judge. That is, they'll explain to everyone what's going on, answering questions and giving instructions that are "above" the game, but they also act
@@ -241,4 +241,5 @@ If all you need is a dice (of any size), check out
 </center>
 
 <p class="page_number" style="margin-top:80px">14</p>
+
 `
