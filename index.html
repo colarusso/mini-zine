@@ -111,33 +111,33 @@
     <b>Print Preview</b> 
 </div>
 
-  <!-- Front Side -->
-  <div class="sheet">
-    <div id="page15" class="page even">16</div>
-    <div id="page0" class="page odd">1</div>
-    <div id="page3" class="page even">4</div>
-    <div id="page12" class="page odd">13</div>
+  <div id="printable_pages">
+    <!-- Front Side -->
+    <div class="sheet">
+      <div id="page15" class="page even">16</div>
+      <div id="page0" class="page odd">1</div>
+      <div id="page3" class="page even">4</div>
+      <div id="page12" class="page odd">13</div>
 
-    <div id="page8" class="page odd rotate">9</div>
-    <div id="page7" class="page even rotate">8</div>
-    <div id="page4" class="page odd rotate">5</div>
-    <div id="page11" class="page even rotate">12</div>
+      <div id="page8" class="page odd rotate">9</div>
+      <div id="page7" class="page even rotate">8</div>
+      <div id="page4" class="page odd rotate">5</div>
+      <div id="page11" class="page even rotate">12</div>
+    </div>
+
+    <!-- Back Side -->
+    <div class="sheet">
+      <div id="page9" class="page even">10</div>
+      <div id="page6" class="page odd">7</div>
+      <div id="page5" class="page even">6</div>
+      <div id="page10" class="page odd">11</div>
+
+      <div id="page14" class="page odd rotate">15</div>
+      <div id="page1" class="page even rotate">2</div>
+      <div id="page2" class="page odd rotate">3</div>
+      <div id="page13" class="page even rotate">14</div>
+    </div>
   </div>
-
-  <!-- Back Side -->
-  <div class="sheet">
-    <div id="page9" class="page even">10</div>
-    <div id="page6" class="page odd">7</div>
-    <div id="page5" class="page even">6</div>
-    <div id="page10" class="page odd">11</div>
-
-    <div id="page14" class="page odd rotate">15</div>
-    <div id="page1" class="page even rotate">2</div>
-    <div id="page2" class="page odd rotate">3</div>
-    <div id="page13" class="page even rotate">14</div>
-  </div>
-
-  <div id="extra_pages"></div>
 
   <div class="no-print" style="margin:15px;">By <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank">David Colarusso</a> | <a href="https://github.com/colarusso/mini-zine" target="_blank">GitHub</a></div>
 
@@ -160,7 +160,7 @@
 
     var pageCount = 16;
     function addSheet() {
-      body = document.getElementById("extra_pages");
+      body = document.getElementById("printable_pages");
       newSheet = document.createElement('div');
       newSheet.className = 'sheet';
       first_page = pageCount-1
@@ -175,13 +175,13 @@
         }
         if (i >= 4) newPage.classList.add('rotate');
         newPage.id = `page${first_page+page_layout[i]}`;
-        newPage.textContent = first_page+page_layout[i] + 1;
+        newPage.textContent = "" //first_page+page_layout[i] + 1;
         pageCount++;
         newSheet.appendChild(newPage);
       }
       body.appendChild(newSheet);
 
-      body = document.getElementById("extra_pages");
+      body = document.getElementById("printable_pages");
       newSheet = document.createElement('div');
       newSheet.className = 'sheet';
       page_layout = [10, 7, 6, 11, 15, 2, 3, 14]
@@ -195,7 +195,7 @@
         }
         if (i >= 4) newPage.classList.add('rotate');
         newPage.id = `page${first_page+page_layout[i]}`;
-        newPage.textContent = first_page+page_layout[i] + 1;
+        newPage.textContent = "" //first_page+page_layout[i] + 1;
         pageCount++;
         newSheet.appendChild(newPage);
       }
@@ -204,9 +204,18 @@
 
     function parse_pages() {
         saveValues();
+        var sheets = document.getElementsByClassName("sheet");
+        for (var i = sheets.length - 1; i > 1; i--) {
+            sheets[i].parentNode.removeChild(sheets[i]);    
+        }
+        pageCount = 16
+
         pages = document.getElementById("input_text").value.split("<page_break>");
+        //for (var i = sheets.length - 1; i > 1; i--) {
+        //    sheets[i].parentNode.removeChild(sheets[i]);    
+        //} 
         for (let step = 0; step < pageCount; step++) {
-          document.getElementById("page"+step).innerHTML = step+1;
+          document.getElementById("page"+step).innerHTML = "" //step+1;
         }
         for (page in pages) {
             //console.log(page,pageCount)
