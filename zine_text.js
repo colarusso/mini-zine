@@ -27,16 +27,16 @@ Interactive Helper . . . . . . . . . . . . . . . . . . . . . 14
 </p>
 
 <h2><a href="#intro" name="intro" class="anchor"></a>Introduction</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;In role-playing games (RPGs) players assume the roles of characters in a simulated world. Not just anything goes, however. Outcomes are shaped by structure &amp; rules, the result of a player's actions interacting with an imagined reality. This handbook and the accompanying session at LITCon2025 will show you how to turn legal cases into simple tabletop RPGs by wrapping some rules around legal fact patterns and gathering a group of three or more players.
+In role-playing games (RPGs) players assume the roles of characters in a simulated world. Not just anything goes, however. Outcomes are shaped by structure &amp; rules, the result of a player's actions interacting with an imagined reality. This handbook and the accompanying session at LITCon2025 will show you how to turn legal cases into simple tabletop RPGs by wrapping some rules around legal fact patterns and gathering a group of three or more players.
 
 <p class="page_number" style="margin-top:9px">1</p>
 <page_break>
 
 <h2 style="margin-top:10px"><a href="#ability" name="ability" class="anchor"></a>Ability Checks</h2>
 
-&nbsp;&nbsp;&nbsp;&nbsp;When a player takes an action in-game and the outcome is uncertain (e.g., whether an attorney's argument succeeds), RPGs provide users with a way to decide what happens. To keep it fair, these decisions aren't left up to one player, but to keep it believable, easy things need to be easy and hard things hard. The process of checking to see if a player is able to succeed at a task is called an <i>ability check</i>.
+When a player takes an action in-game and the outcome is uncertain (e.g., whether an attorney's argument succeeds), RPGs provide users with a way to decide what happens. To keep it fair, these decisions aren't left up to one player, but to keep it believable, easy things need to be easy and hard things hard. The process of checking to see if a player is able to succeed at a task is called an <i>ability check</i>.
 
-<br>&nbsp;&nbsp;&nbsp;&nbsp;Here's how it works: (1) figure out how hard the task is—this is called the <i>difficulty class</i> (DC), and it will be a number between 1 and 20; (2) have the player taking the action role a 20-sided dice; (3) if their role is greater than or equal to the DC, they succeed! Other RPGs may add nuance by adding additional numbers to a roll, but we'll keep it simple and just use the number that comes up on the dice.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Here's how it works: (1) figure out how hard the task is—this is called the <i>difficulty class</i> (DC) and will be a number between 1 and 20; (2) have the player taking the action role a 20-sided dice; (3) if their role is greater than or equal to the DC, they succeed! Other RPGs may add nuance by adding additional numbers to a roll, but we'll keep it simple and just use the number that comes up on the dice.
 
 <br>&nbsp&nbsp&nbsp&nbspThere are many ways to determine a DC. We'll talk about some options in a bit, but often you just "look it up." E.g., here's a table you can use.
 
@@ -83,12 +83,13 @@ your table. We want everyone to have a role even if they aren't an attorney or T
 Attorneys do what you expect. It's their job to advocate for their side: research case law, make motions, examine witnesses, and persuade the finders of law and fact, but most importantly, they get to roll the dice!
 
 <h2><a href="#sheets" name="sheets" class="anchor"></a>Case Sheets</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;The case sheet is how the judge knows what to do. You can simulate a case at various points in its life cycle. Here we'll introduce you to a case sheet and explain how it's used. 
+The case sheet is how the judge knows what to do. You can simulate a case at various points in its life cycle. Here we'll introduce you to a case sheet and explain how it's used. 
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Functionally, the sheet acts as a proposed set of jury instructions (the rows in the elements column) and a witness list (subsequent columns), along with expected testimony lined up with its source and the element it aims to bolster or undermine. If you aim to simulate a case from the start, you begin with an empty table.
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Each attorney is trying to fill in the sheet to build the best possible case for their client. Here's a simplified sample sheet.
-<p class="page_number">6</p>
+
+<p class="page_number" style="margin-top:5px">6</p>
 
 <page_break>
 
@@ -138,6 +139,7 @@ Plaintiff seemed okay; walked without help.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Everything, is done in the shadow of the Case Sheet. I tend to break a simulation into three parts/sessions: (1) motion practice; (2) trial; and (3) oral arguments (appeals). In 1 we agree on the elements and witness list (first column and headers) and address things like motions to dismiss. In 2, we fill in the cells below each witness, and in 3 we treat the sheet as the factual record. 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Players prep for gameplay independently before we come together, with the attorneys do most of the hard work. I like to choose a case with an online docket containing at least a complaint and motion to dismiss. I tell folks to start there to figure out their elements and arguments. The docket may go beyond these, but I tell them our reality diverges here. I'm also a big fan of model jury instructions. 
+
 <h2><a href="#gameplay" name="gameplay" class="anchor"></a>Sample Gameplay</h2>
 Having started with a blank Sheet, the first thing we do is fill in the elements. This may be done largely over email before meeting for arguments. You can then pick up where needed. For example:
 
@@ -231,7 +233,7 @@ Immediately following arguments we will break into a whole class discussion betw
 
 <page_break>
 
-<h2><a href="#helper" name="helper" class="anchor"></a>Interactive Helper</h2>
+<h2 style="margin-top:10px"><a href="#helper" name="helper" class="anchor"></a>Interactive Helper</h2>
 Visit https://lawrpg.org/litcon2025 to access this session's interactive helper. There you will find information for our case as well as guidance on how to run your simulation, included is a copy of this handbook. You can also get there with this QR code: 
 <center>
 <br>
