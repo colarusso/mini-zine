@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <title>Mini-Zine Maker: Use one sheet of paper to make a 16-page booklet</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="Mini-Zine Maker: Use one sheet of paper to make a 16-page booklet"/>
+	<meta property="og:description" content="I wanted to make mini-zines (16-page booklets made from a single sheet of paper) for LITCon2025, and I couldn't find a simple template online. So, I made this tool to parse text and handle page placement. To insert a page break use &lt;page_break>. You can use standard HTML to add style and images along with the built-in page_number class (e.g., &lt;p class=&OpenCurlyDoubleQuote;page_number&CloseCurlyDoubleQuote;>1&lt;/p>). If you want to play with fonts, margins, and the like, you can fork this project and edit the CSS. If you add more than 16 pages of content, additional sheets of paper will be added to the printable document. When printing, select portrait mode with two-sided print and long-edge binding."/>
+	<meta property="og:image" content="images/share.png"/>
+
   <style>
     @page {
         margin: 0in;
@@ -83,16 +90,16 @@
 <div class="no-print" style="width:1050px">
     <h1>Mini-Zine Maker</h1>
     <p>
-        I wanted to make mini-zines (16-page booklets made from a single sheet of paper) for <a href="https://suffolklitlab.org/events/lit-con/" target="_blank">LITCon2025</a>, and I couldn't find a simple template online. So, I made this tool to parse text and handle page placement. To insert a page break use <code>&lt;page_break&gt;</code>. You can use standard HTML to add style and images along with the built-in <i>page_number</i> class (e.g., <code>&lt;p class="page_number"&gt;1&lt;/p&gt;</code>). If you want to play with font, margins, and the like, you can fork <a href="https://github.com/colarusso/mini-zine" target="_blank">this project</a> and edit the CSS. If you add more than 16 pages of content, additional sheets of paper will be added to the printable document. When printing, select portriat mode with two-sided print and long-edge binding.
+        I wanted to make mini-zines (16-page booklets made from a single sheet of paper) for <a href="https://suffolklitlab.org/events/lit-con/" target="_blank">LITCon2025</a>, and I couldn't find a simple template online. So, I made this tool to parse text and handle page placement. To insert a page break use <code>&lt;page_break&gt;</code>. You can use standard HTML to add style and images along with the built-in <i>page_number</i> class (e.g., <code>&lt;p class="page_number"&gt;1&lt;/p&gt;</code>). If you want to play with fonts, margins, and the like, you can fork <a href="https://github.com/colarusso/mini-zine" target="_blank">this project</a> and edit the CSS. If you add more than 16 pages of content, additional sheets of paper will be added to the printable document. When printing, select <i>portrait mode</i> with <i>two-sided print</i> and <i>long-edge binding</i>.
     </p>
     <table cellpadding="5px" style="text-align: center;margin:0 auto;width:900px;"><tr>
-        <td width="25%"><img src="images/fold.png" width="100%"><br>Fold</td>
-        <td width="25%"><img src="images/cut.png" width="100%"><br>Cut</td>
-        <td width="25%"><img src="images/staple.png" width="100%"><br>Staple</td>
-        <td width="25%"><img src="images/share.png" width="100%"><br>Share</td>
+        <td width="25%"><img src="images/fold.png" width="100%" alt="The image shows a small booklet made of folded paper, viewed from an angled top-down perspective. The booklet is open and standing upright on a wooden surface, with its pages slightly fanned out. One of the inside pages displays a printed table with text in columns and rows, though the content is only partially visible. The lighting is soft and natural, casting a warm tone over the scene. The handmade, informal appearance suggests it is a zine, pamphlet, or quick-reference guide."><br>Fold</td>
+        <td width="25%"><img src="images/cut.png" width="100%" alt="The image shows four views of a small folded zine-style booklet titled *Law RPG Beginner’s Handbook* by David Colarusso, laid flat on a wooden surface. Each booklet page is visible, arranged to display its contents. The front cover includes a 20-sided die illustration and a subtitle. Inside pages feature game instructions, sample dialogue mimicking courtroom scenes (labeled “JUDGE” and “ATTORNEY”), rules on ability checks, case sheets, roles, and a QR code linking to an interactive helper. One section breaks down missions, objectives, and outcomes in a tabular format, suggesting a tabletop RPG-style gameplay experience themed around courtroom law. The booklet appears to be an educational or satirical take on combining role-playing mechanics with legal procedures."><br>Cut</td>
+        <td width="25%"><img src="images/staple.png" width="100%" alt="The image shows a small DIY booklet titled *Law RPG Beginner’s Handbook* being stapled along the fold with a red Swingline stapler. The booklet is opened to display the back cover and inside back page, which includes a QR code labeled “Interactive Helper” and instructions for accessing online resources. The front cover features a 20-sided die illustration and the author’s name, David Colarusso. The booklet rests on a wooden surface, and the lighting is soft, creating a warm, casual crafting atmosphere. This moment captures the final step of assembling a printed zine or mini-handbook, emphasizing its homemade, accessible nature."><br>Staple</td>
+        <td width="25%"><img src="images/share.png" width="100%" alt="The image shows a close-up of a hand holding a small, homemade booklet titled *Law RPG Beginner’s Handbook* by David Colarusso. The cover features a black-and-white illustration of a 20-sided die (commonly used in tabletop role-playing games), reinforcing the theme of combining legal education with RPG mechanics. The booklet is neatly folded and stapled along the spine, with visible page edges, indicating it has been freshly assembled. The background is a wooden surface, and the overall scene conveys a DIY, educational, and playful approach to learning about law through interactive storytelling."><br>Share</td>
     </tr></table>
     <p>
-        <b>Booklet Text/HTML</b><br>
+        <b>Edit Zine Text/HTML</b><br>
         <textarea id="input_text" onkeyup="parse_pages();"></textarea>
     </p>
     <p>
