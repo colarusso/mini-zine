@@ -25,13 +25,14 @@ Case Sheets . . . . . . . . . . . . . . . . . . . . . . . . . 6
 Sample Gameplay . . . . . . . . . . . . . . . . . . . . . . 8
 Interactive Helper . . . . . . . . . . . . . . . . . . . . . 14
 </p>
-<h2><a href="#wisdom" name="wisdom" class="anchor"></a>Introduction</h2>
+
+<h2><a href="#intro" name="intro" class="anchor"></a>Introduction</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;In role-playing games (RPGs) players assume the roles of characters in a simulated world. Not just anything goes, however. Outcomes are shaped by structure &amp; rules, the result of a player's actions interacting with an imagined reality. This handbook and the accompanying session at LITCon2025 will show you how to turn legal cases into simple tabletop RPGs by wrapping some rules around legal fact patterns and gathering a group of three or more players.
 
 <p class="page_number" style="margin-top:9px">1</p>
 <page_break>
 
-<h2 style="margin-top:10px">Ability Checks</h2>
+<h2 style="margin-top:10px"><a href="#ability" name="ability" class="anchor"></a>Ability Checks</h2>
 
 &nbsp;&nbsp;&nbsp;&nbsp;When a player takes an action in-game and the outcome is uncertain (e.g., whether an attorney's argument succeeds), RPGs provide users with a way to decide what happens. To keep it fair, these decisions aren't left up to one player, but to keep it believable, easy things need to be easy and hard things hard. The process of checking to see if a player is able to succeed at a task is called an <i>ability check</i>.
 
@@ -48,10 +49,10 @@ Interactive Helper . . . . . . . . . . . . . . . . . . . . . 14
 <tr><td>Medium                 </td><td>10 </td><td>| Nearly Impossible &nbsp;&nbsp; </td><td>20</td></tr>
 </table>
 
-<h2>Roles</h2>
+<h2><a href="#roles" name="roles" class="anchor"></a>Roles</h2>
 If we're going to be taking on roles, lets figure out what they are, but first, a word of caution. If you're not familiar with RPGs, things likely won't "click" until you finis the Sample Gameplay. So, you only have to hold on a little longer.
 
-<h2>The Judge</h2>
+<h2><a href="#judge" name="judge" class="anchor"></a>The Judge</h2>
 You may be wondering who gets to decide if a task is "hard," well the Judge of course. In other RPGs this role is often called the Game Master (GM). They are the nearly omniscient narrator of our world, and given our setting they also play the actual judge. That is, they'll explain to everyone what's going on, answering questions and giving instructions that are "above" the game, but they also act
 
 <p class="page_number">3</p>
@@ -61,7 +62,7 @@ like the judge, playing that part as they interact with the attorneys. In-game, 
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;The Judge shapes the gameplay, deciding where to focus. They can be a stickler for procedure or wave their hands, depending on their goals and comfort. They also get to turn up or turn down the detail. Maybe they'll make everyone speak just as they would in court, or suggest folks talk about themselves in the third-person, e.g., "Here's where I'd make an argument about X." If you're playing the judge, you'll get better the more you play. Think of yourself as a teacher guiding a classroom discussion, you're not trying to "win," you're trying to make it a good experience for your players/students.
 
-<h2>Finders of Fact/Law</h2>
+<h2><a href="#finders" name="finders" class="anchor"></a>Finders of Fact/Law</h2>
 Hopefully, there are more than 3 people at 
 
 <p class="page_number">4</p>
@@ -78,10 +79,10 @@ your table. We want everyone to have a role even if they aren't an attorney or T
 <p class="page_number">5</p>
 <page_break>
 
-<h2 style="margin-top:3px">Attorneys</h2>
+<h2 style="margin-top:3px"><a href="#attorneys" name="attorneys" class="anchor"></a>Attorneys</h2>
 Attorneys do what you expect. It's their job to advocate for their side: research case law, make motions, examine witnesses, and persuade the finders of law and fact, but most importantly, they get to roll the dice!
 
-<h2>Case Sheets</h2>
+<h2><a href="#sheets" name="sheets" class="anchor"></a>Case Sheets</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;The case sheet is how the judge knows what to do. You can simulate a case at various points in its life cycle. Here we'll introduce you to a case sheet and explain how it's used. 
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Functionally, the sheet acts as a proposed set of jury instructions (the rows in the elements column) and a witness list (subsequent columns), along with expected testimony lined up with its source and the element it aims to bolster or undermine. If you aim to simulate a case from the start, you begin with an empty table.
@@ -137,7 +138,7 @@ Plaintiff seemed okay; walked without help.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Everything, is done in the shadow of the Case Sheet. I tend to break a simulation into three parts/sessions: (1) motion practice; (2) trial; and (3) oral arguments (appeals). In 1 we agree on the elements and witness list (first column and headers) and address things like motions to dismiss. In 2, we fill in the cells below each witness, and in 3 we treat the sheet as the factual record. 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;Players prep for gameplay independently before we come together, with the attorneys do most of the hard work. I like to choose a case with an online docket containing at least a complaint and motion to dismiss. I tell folks to start there to figure out their elements and arguments. The docket may go beyond these, but I tell them our reality diverges here. I'm also a big fan of model jury instructions. 
-<h2>Sample Gameplay</h2>
+<h2><a href="#gameplay" name="gameplay" class="anchor"></a>Sample Gameplay</h2>
 Having started with a blank Sheet, the first thing we do is fill in the elements. This may be done largely over email before meeting for arguments. You can then pick up where needed. For example:
 
 <p class="page_number">8</p>
@@ -230,7 +231,7 @@ Immediately following arguments we will break into a whole class discussion betw
 
 <page_break>
 
-<h2>Interactive Helper</h2>
+<h2><a href="#helper" name="helper" class="anchor"></a>Interactive Helper</h2>
 Visit https://lawrpg.org/litcon2025 to access this session's interactive helper. There you will find information for our case as well as guidance on how to run your simulation, included is a copy of this handbook. You can also get there with this QR code: 
 <center>
 <br>
