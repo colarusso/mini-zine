@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini-Zine Maker: Use one sheet of paper to make a 16-page booklet</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <style>
+    @page {
+        margin: 0in;
+        size: landscape;
+    }
+    @media print {
+      body { margin: 0; }
+      .sheet { page-break-after: always; }
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media print
+    {
+        .no-print, .no-print * {
+            display: none !important;
+        }
+    }
+    #input_text{
+        width:1050px;
+        height: 400px;
+    }
+    .sheet {
+      width: 11in;
+      height: 8.5in;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      page-break-after: always;
+      break-after: page;
+    }
+    .page {
+      border: 1px dashed #999;
+      padding: 20px 18px;
+      box-sizing: border-box;
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+      font-size: 11px;
+      line-height: 13px;
+      text-align: left;
+      overflow: hidden;
+    }
+    .odd {
+        padding-left: 25px;
+    }
+    .even {
+        padding-right: 25px;
+    }
+    h1 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    code {
+        background:#eee;
+    }
+    blockquote{
+        margin:0 0 0 0;
+        padding-left: 10px;
+        border-left: solid 3px #828282;
+    }
+    .page_number {
+        font-size: 9px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .rotate {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+<div class="no-print" style="width:1050px">
+    <h1>Mini-Zine Maker</h1>
+    <p>
+        I wanted to make mini-zines (16-page booklets made from a single sheet of paper) for <a href="https://suffolklitlab.org/events/lit-con/" target="_blank">LITCon2025</a>, and I couldn't find a simple template online. So, I made this tool to parse text and handle page placement. To insert a page break use <code>&lt;page_break&gt;</code>. You can use standard HTML to add style and images along with the built-in <i>page_number</i> class (e.g., <code>&lt;p class="page_number"&gt;1&lt;/p&gt;</code>). If you want to play with font, margins, and the like, you can fork <a href="https://github.com/colarusso/mini-zine" target="_blank">this project</a> and edit the CSS. If you add more than 16 pages of content, additional sheets of paper will be added to the printable document. When printing, select portriat mode with two-sided print and long-edge binding.
+    </p>
+    <table cellpadding="5px" style="text-align: center;margin:0 auto;width:900px;"><tr>
+        <td width="25%"><img src="images/fold.png" width="100%"><br>Fold</td>
+        <td width="25%"><img src="images/cut.png" width="100%"><br>Cut</td>
+        <td width="25%"><img src="images/staple.png" width="100%"><br>Staple</td>
+        <td width="25%"><img src="images/share.png" width="100%"><br>Share</td>
+    </tr></table>
+    <p>
+        <b>Booklet Text/HTML</b><br>
+        <textarea id="input_text" onkeyup="parse_pages();"></textarea>
+    </p>
+    <p>
+        <button style="padding:5px;width:100%" onClick="window.print()">Print Zine</button>
+    </p>
+    <b>Print Preview</b> 
+</div>
+
+  <!-- Front Side -->
+  <div class="sheet">
+    <div id="page15" class="page even">16</div>
+    <div id="page0" class="page odd">1</div>
+    <div id="page3" class="page even">4</div>
+    <div id="page12" class="page odd">13</div>
+
+    <div id="page8" class="page odd rotate">9</div>
+    <div id="page7" class="page even rotate">8</div>
+    <div id="page4" class="page odd rotate">5</div>
+    <div id="page11" class="page even rotate">12</div>
+  </div>
+
+  <!-- Back Side -->
+  <div class="sheet">
+    <div id="page9" class="page even">10</div>
+    <div id="page6" class="page odd">7</div>
+    <div id="page5" class="page even">6</div>
+    <div id="page10" class="page odd">11</div>
+
+    <div id="page14" class="page odd rotate">15</div>
+    <div id="page1" class="page even rotate">2</div>
+    <div id="page2" class="page odd rotate">3</div>
+    <div id="page13" class="page even rotate">14</div>
+  </div>
+
+  <div class="no-print" style="margin:15px;">By <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank">David Colarusso</a> | <a href="https://github.com/colarusso/mini-zine" target="_blank">GitHub</a></div>
+
+</body>
+<script type="text/javascript" src="zine_text.js"></script>
+<script>
+
+    function loadValues() {
+        if (localStorage.getItem('input_text')) {
+            document.getElementById("input_text").value = localStorage.getItem('input_text');
+        } else {
+            document.getElementById("input_text").value = text;        
+        }
+    }
+    loadValues();
+    function saveValues() {
+        // Save the min and max values to local storage
+        localStorage.setItem('input_text', document.getElementById("input_text").value);
+    }
+
+    var pageCount = 16;
+    function addSheet() {
+      body = document.body;
+      newSheet = document.createElement('div');
+      newSheet.className = 'sheet';
+      first_page = pageCount-1
+      page_layout = [16, 1, 4, 13, 9, 8, 5, 12]
+      for (let i = 0; i < 8; i++) {
+        const newPage = document.createElement('div');
+        newPage.className = 'page';
+        if (((first_page+page_layout[i]+1) % 2)==0) {
+            newPage.classList.add('even');
+        } else {
+            newPage.classList.add('odd');
+        }
+        if (i >= 4) newPage.classList.add('rotate');
+        newPage.id = `page${first_page+page_layout[i]}`;
+        newPage.textContent = first_page+page_layout[i] + 1;
+        pageCount++;
+        newSheet.appendChild(newPage);
+      }
+      body.appendChild(newSheet);
+
+      body = document.body;
+      newSheet = document.createElement('div');
+      newSheet.className = 'sheet';
+      page_layout = [10, 7, 6, 11, 15, 2, 3, 14]
+      for (let i = 0; i < 8; i++) {
+        const newPage = document.createElement('div');
+        newPage.className = 'page';
+        if (((first_page+page_layout[i]+1) % 2)==0) {
+            newPage.classList.add('even');
+        } else {
+            newPage.classList.add('odd');
+        }
+        if (i >= 4) newPage.classList.add('rotate');
+        newPage.id = `page${first_page+page_layout[i]}`;
+        newPage.textContent = first_page+page_layout[i] + 1;
+        pageCount++;
+        newSheet.appendChild(newPage);
+      }
+      body.appendChild(newSheet);
+    }
+
+    function parse_pages() {
+        saveValues();
+        pages = document.getElementById("input_text").value.split("<page_break>");
+        for (page in pages) {
+            //console.log(page,pageCount)
+            if ((((1*page+1) % (pageCount+1))==0) & ((pageCount % 16)==0)){ addSheet(); }
+            document.getElementById("page"+page).innerHTML = pages[page];
+        }
+    }
+
+    parse_pages();
+
+</script>
+</html>
